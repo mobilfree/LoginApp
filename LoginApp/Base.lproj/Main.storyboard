@@ -104,6 +104,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <segue destination="i6a-kb-QH7" kind="unwind" unwindAction="unwindSegueWithSegue:" id="uxQ-nx-R5z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-4w-eHB">
                                 <rect key="frame" x="129" y="214" width="62" height="69"/>
@@ -132,8 +135,12 @@
                             <constraint firstItem="ObL-4w-eHB" firstAttribute="centerX" secondItem="DHS-uc-lH9" secondAttribute="centerX" id="sJK-iv-7ua"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcome" destination="b9U-Jc-o52" id="uJY-YS-7fo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ujy-cN-gYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="i6a-kb-QH7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="800.625" y="82.394366197183103"/>
         </scene>
