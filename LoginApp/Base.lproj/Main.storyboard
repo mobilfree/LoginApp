@@ -41,7 +41,7 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Eq-vN-XZN"/>
-                                            <segue destination="Paq-Tf-HcF" kind="presentation" id="UYh-Rk-8VE"/>
+                                            <segue destination="Paq-Tf-HcF" kind="presentation" id="USB-mI-PM3"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-9P-LSJ">
@@ -87,25 +87,63 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="83.450704225352112"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="bzh-Ga-rhS">
             <objects>
-                <viewController id="Paq-Tf-HcF" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Paq-Tf-HcF" customClass="WelcomeViewController" customModule="LoginApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMi-sD-8lM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-uc-lH9">
+                                <rect key="frame" x="127.5" y="418" width="65" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Dh5-xw-Jpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-4w-eHB">
+                                <rect key="frame" x="129" y="214" width="62" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9U-Jc-o52">
+                                <rect key="frame" x="60" y="96" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Kea-a1-vHW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="c51-US-gDP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="ObL-4w-eHB" firstAttribute="centerX" secondItem="b9U-Jc-o52" secondAttribute="centerX" id="6oQ-jH-p7M"/>
+                            <constraint firstItem="ObL-4w-eHB" firstAttribute="top" secondItem="b9U-Jc-o52" secondAttribute="bottom" constant="89" id="WSy-TR-e5u"/>
+                            <constraint firstItem="ObL-4w-eHB" firstAttribute="top" secondItem="SMi-sD-8lM" secondAttribute="top" constant="214" id="bv7-9N-7vd"/>
+                            <constraint firstItem="b9U-Jc-o52" firstAttribute="centerX" secondItem="c51-US-gDP" secondAttribute="centerX" id="du8-Jk-hEs"/>
+                            <constraint firstItem="c51-US-gDP" firstAttribute="bottom" secondItem="DHS-uc-lH9" secondAttribute="bottom" constant="119" id="qTw-0V-XkP"/>
+                            <constraint firstItem="ObL-4w-eHB" firstAttribute="centerX" secondItem="DHS-uc-lH9" secondAttribute="centerX" id="sJK-iv-7ua"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ujy-cN-gYI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="83"/>
+            <point key="canvasLocation" x="800.625" y="82.394366197183103"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
